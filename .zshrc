@@ -4,9 +4,6 @@ ZSH_THEME="robbyrussell"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 source $ZSH/oh-my-zsh.sh
 
-# tmux
-bindkey '^ ' autosuggest-accept
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -63,3 +60,6 @@ alias ta='tmux attach'
 alias tk="tmux kill-session -t"
 alias tf='tmuxifier'
 alias tfls='tmuxifier load-session'
+
+# tmux
+bindkey '^ ' autosuggest-accept
