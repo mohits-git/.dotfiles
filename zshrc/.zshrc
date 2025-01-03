@@ -63,3 +63,12 @@ alias tfls='tmuxifier load-session'
 
 # tmux
 bindkey '^ ' autosuggest-accept
+
+# Postgres
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/mohitkhatri/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mohitkhatri/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/mohitkhatri/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mohitkhatri/google-cloud-sdk/completion.zsh.inc'; fi
