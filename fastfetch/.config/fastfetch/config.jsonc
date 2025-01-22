@@ -30,5 +30,12 @@
     "locale",
     "break",
     "colors"
-  ]
+  ],
+  // "logo": "~/.config/fastfetch/win.txt"
+  "logo": {
+      "source": "~/.config/fastfetch/win.txt",
+      "color": {
+          "1": "white"
+      }
+  }
 }
