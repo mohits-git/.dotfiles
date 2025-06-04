@@ -743,6 +743,19 @@ require('lazy').setup({
       'MunifTanjim/nui.nvim',
       -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
+    -- Disable Neo-tree automatically opening on startup
+    --  If you want to use Neo-tree, you can open it with `:Neotree`
+    -- merged with the default configuration
+    opts = {
+      close_if_last_window = true,
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignored = true,
+        },
+        hijack_netrw_behavior = 'disabled'
+      },
+    },
   },
   { -- A simple plugin to present your markdown files in a presentation mode
     'sotte/presenting.nvim',
