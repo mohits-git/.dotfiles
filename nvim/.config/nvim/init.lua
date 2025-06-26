@@ -753,7 +753,7 @@ require('lazy').setup({
           hide_dotfiles = false,
           hide_gitignored = true,
         },
-        hijack_netrw_behavior = 'disabled'
+        hijack_netrw_behavior = 'disabled',
       },
     },
   },
@@ -796,6 +796,29 @@ require('lazy').setup({
     keys = {
       { '<leader>lg', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
     },
+  },
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    main = 'ibl',
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
+    config = function()
+      -- See `:help indent-blankline`
+      require('ibl').setup {
+        indent = {
+          char = '┊',
+        },
+        whitespace = {
+          remove_blankline_trail = false,
+        },
+        scope = {
+          enabled = true,
+          show_start = false,
+          show_end = false,
+        },
+      }
+    end,
   },
 }, {
   ui = {
