@@ -1,0 +1,20 @@
+# System tools and monitors
+btop
+fastfetch
+fd-find      # called `fdfind` in Ubuntu
+fzf
+gcc
+git
+htop
+libmagic-dev
+neovim
+ripgrep
+stow
+tmux
+
+# Zsh plugin (usually cloned into ~/.oh-my-zsh/custom/plugins)
+# No apt package for zsh-syntax-highlighting, installed via git clone
+
+# Fonts (manual or script install needed for Nerd Fonts)
+# Nerd fonts like 'Hack' can't be installed via apt
+# Download from: https://www.nerdfonts.com/font-downloads
