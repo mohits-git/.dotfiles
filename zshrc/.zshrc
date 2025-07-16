@@ -65,9 +65,6 @@ alias tfls='tmuxifier load-session'
 # tmux
 bindkey '^ ' autosuggest-accept
 
-# Postgres
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/mohitkhatri/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mohitkhatri/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -85,3 +82,4 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 source <(ng completion script)
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
