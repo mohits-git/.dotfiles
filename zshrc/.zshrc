@@ -4,19 +4,19 @@ ZSH_THEME="robbyrussell"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 source $ZSH/oh-my-zsh.sh
 
+export PATH="$PATH:/snap/bin"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Set up vim key binding for terminal
 set -o vi
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 # Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
 export FZF_DEFAULT_OPTS="--extended"
 export FZF_DEFAULT_COMMAND='fd -H -E .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
