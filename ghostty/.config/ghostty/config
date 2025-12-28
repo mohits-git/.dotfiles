@@ -1,5 +1,5 @@
 macos-titlebar-style = hidden
-theme = GruvboxDarkHard
+theme = Gruvbox Dark Hard
 font-size = 16
 cursor-style = block
 background-opacity = 0.80

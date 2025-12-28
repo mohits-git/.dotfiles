@@ -71,4 +71,15 @@ if [ -f '/Users/mohitkhatri/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/moh
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/mohitkhatri/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mohitkhatri/google-cloud-sdk/completion.zsh.inc'; fi
+
+# postgresql@17
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+
+# Ruby
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
