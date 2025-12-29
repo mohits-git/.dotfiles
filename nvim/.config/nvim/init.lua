@@ -594,6 +594,18 @@ require('lazy').setup({
   },
   {
     'github/copilot.vim',
+    -- setup the keymaps for copilot
+    -- leader-ce to enable 
+    -- leader-cd to disable
+    keys = {
+      { '<leader>ce', '<cmd>Copilot enable<cr>', desc = 'Copilot Enable' },
+      { '<leader>cd', '<cmd>Copilot disable<cr>', desc = 'Copilot Disable' },
+      { '<leader>c?', '<cmd>Copilot help<cr>', desc = 'Copilot Help' },
+      { '<leader>ci', '<cmd>Copilot info<cr>', desc = 'Copilot Info' },
+      { '<leader>cc', '<cmd>Copilot setup<cr>', desc = 'Copilot Setup' },
+      { '<leader>cp', '<cmd>Copilot panel<cr>', desc = 'Copilot Panel' },
+      { '<leader>cs', '<cmd>Copilot status<cr>', desc = 'Copilot Status' },
+    },
   },
   {
     'm4xshen/autoclose.nvim',
@@ -706,6 +718,41 @@ require('lazy').setup({
         },
       }
     end,
+  },
+  {
+    'kevinhwang91/nvim-ufo',
+    dependencies = { 'kevinhwang91/promise-async' },
+  },
+  {
+    'ray-x/go.nvim',
+    dependencies = { -- optional packages
+      'ray-x/guihua.lua',
+      'neovim/nvim-lspconfig',
+      'nvim-treesitter/nvim-treesitter',
+    },
+    opts = {
+      -- lsp_keymaps = false,
+      -- other options
+    },
+    config = function(lp, opts)
+      require('go').setup(opts)
+      local format_sync_grp = vim.api.nvim_create_augroup('GoFormat', {})
+      vim.api.nvim_create_autocmd('BufWritePre', {
+        pattern = '*.go',
+        callback = function()
+          require('go.format').goimports()
+        end,
+        group = format_sync_grp,
+      })
+      -- on g+o+i do :GoImpl
+      vim.keymap.set('n', '<leader>goi', function()
+        -- run command :GoImpl
+        require('go.impl').run()
+      end, { desc = '[G]o [I]nterface [I]mplementation' })
+    end,
+    event = { 'CmdlineEnter' },
+    ft = { 'go', 'gomod' },
+    build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
   },
 }, {
   ui = {

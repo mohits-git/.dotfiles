@@ -19,6 +19,9 @@ vim.keymap.set('n', '<leader>Y', [["+Y]])
 
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]])
 
+-- run selected lines in python3
+vim.keymap.set('v', '<leader>rp', ":'<,'>w !python3<CR>")
+
 -- This is going to get me cancelled
 vim.keymap.set('i', '<C-c>', '<Esc>')
 
