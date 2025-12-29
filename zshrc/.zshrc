@@ -61,6 +61,8 @@ alias ta='tmux attach'
 alias tk="tmux kill-session -t"
 alias tf='tmuxifier'
 alias tfls='tmuxifier load-session'
+# docker
+alias docker="sudo docker"
 
 # tmux
 bindkey '^ ' autosuggest-accept
@@ -78,8 +80,25 @@ export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 
+# Go Path
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
+# angular ng
+export PATH="/home/mohitkhatri/.bun/bin:$PATH"
+
+
 # Load Angular CLI autocompletion.
 source <(ng completion script)
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
-export PATH=$PATH:/usr/local/go/bin
+
+# pipenv
+export PIPENV_IGNORE_VIRTUALENVS=1
+export PATH="$HOME/.pipenv-venv/bin:$PATH"
+
+# by python uv installation
+. "$HOME/.local/bin/env"
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
