@@ -53,6 +53,8 @@ alias activate="source venv/bin/activate"
 # stupid alias
 alias n="nvim ."
 alias v="nvim"
+# open editor
+bindkey -s '^E' 'nvim .^M'
 # tmuxifier
 alias tls="tmux ls"
 alias ta='tmux attach'
